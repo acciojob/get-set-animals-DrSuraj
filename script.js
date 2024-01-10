@@ -8,7 +8,8 @@ class Animal {
   }
 
   makeSound() {
-    console.log("Some generic animal sound");
+    // Placeholder method, subclasses should override this
+    console.log("Generic animal sound");
   }
 }
 
