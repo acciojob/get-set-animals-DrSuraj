@@ -1,41 +1,36 @@
-// Animal class
+// Animal Class
 class Animal {
-    constructor(species) {
-        this._species = species;
-    }
+  constructor(species) {
+    this._species = species;
+  }
 
-    get species() {
-        return this._species;
-    }
+  get species() {
+    return this._species;
+  }
 
-    makeSound() {
-        console.log(`The ${this.species} makes a sound`);
-    }
+  makeSound() {
+    console.log(`The ${this.species} makes a sound`);
+    document.getElementById('output').innerHTML += `<p>The ${this.species} makes a sound</p>`;
+  }
 }
 
-// Cat class extending Animal
+// Cat Class
 class Cat extends Animal {
-    constructor(species) {
-        super(species);
-    }
-
-    purr() {
-        console.log("purr");
-    }
+  purr() {
+    console.log('purr');
+    document.getElementById('output').innerHTML += `<p>purr</p>`;
+  }
 }
 
-// Dog class extending Animal
+// Dog Class
 class Dog extends Animal {
-    constructor(species) {
-        super(species);
-    }
-
-    bark() {
-        console.log("woof");
-    }
+  bark() {
+    console.log('woof');
+    document.getElementById('output').innerHTML += `<p>woof</p>`;
+  }
 }
 
-// Example usage
+// Test Cases
 const myCat = new Cat("Siamese");
 myCat.makeSound(); // Output: The Siamese makes a sound
 myCat.purr(); // Output: purr
